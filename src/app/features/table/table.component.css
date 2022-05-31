@@ -9,3 +9,15 @@ h1{
 .red{
     color: red;
 }
+
+button{
+    font-size: small;
+}
+input{
+    font-size: small;
+}
+table,thead,tr,tbody, th, td {
+    border: 1px solid;
+  }
+
+

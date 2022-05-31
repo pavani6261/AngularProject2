@@ -1,35 +1,118 @@
-<div></div>
-<div class="container">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- ----------------------------Search------------------------------- -->
+<!-- <div class="container"> -->
+  <div class="row">
+    <div class="col-md-2">
+      <input type="text"  class="form-control" [(ngModel)]="searchtext" placeholder="search text"/>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+
+  <!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of items | userSearchFilter:searchtext"> {{item.name}} -
+        <span class="label" [ngClass]="{'label-success' : item.status === 'Approved','label-danger' : item.status !== 'Approved'}">{{item.status}}</span></li>
+  </ul>  -->
     <!-- <div class="row">
         <div class="col-md-12"> -->
-            <table class="table table-bordered">
+
+ <!-- ------------------------------Table ------------------------------- -->
+            <!-- <table class="table table-bordered" [(ngModel)]="items" >
                 <thead>
                   <tr>
                     <th>Name</th>
                     <th>Job title</th>
                     <th>City</th>
-                    <th>Connection</th>
+                    <th>Connetion</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead> -->
+                <!-- <tbody>
+                  <tr *ngFor="let item of items | userSearchFilter:searchtext">
+                    <td>{{item.name}}</td>
+                    <td>{{item.jobtitle |uppercase}}</td>
+                    <td>{{item.city}}</td>
+                    <td>{{item.connetion}}</td>
+                    <td [ngClass]="{'green' : item.status === 'Approved','red' : item.status === 'Pending','blue' : item.status ==='Rejected'}">{{item.status}}</td>
+                    <td > -->
+                        <!-- <button type="submit" class="btn btn-primary btn-sm" *ngIf="item.status === 'Pending'">Approve</button>
+                        <button type="submit" class="btn btn-danger btn-sm" *ngIf="item.status === 'Pending'">Reject</button>
+                        <button style="background-color: rgba(155, 231, 14, 0.267);" type="button" data-toggle="modal" data-target="#basicModal" (click)="viewFn(item.name)">View Details</button> -->
+                        <!-- <a href="#" data-toggle="modal" data-target="#basicModal">View Detail</a> -->
+                        <!-- -------------------------View detail---Model--------------------------------------------- -->
+
+
+<!--
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>-->
+
+
+              <table class="table table-bordered" [(ngModel)]="tempItems" >
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Job title</th>
+                    <th>City</th>
+                     <th>Leave Type</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let item of items">
+                  <tr *ngFor="let item of tempItems| userSearchFilter:searchtext">
                     <td>{{item.name}}</td>
                     <td>{{item.jobtitle}}</td>
                     <td>{{item.city}}</td>
-                    <td>{{item.connection}}</td>
-                    <td [ngClass]="{'green' : item.status === 'Approved','red' : item.status !== 'Approved'}">{{item.status}}</td>
+                    <td>{{item.leavetype}}</td>
+                    <td [ngClass]="{'green' : item.status === 'Approved','red' : item.status === 'Pending','blue' : item.status ==='Rejected'}">{{item.status}}</td>
                     <td >
-                        <button type="submit" class="btn btn-primary btn-sm" *ngIf="item.status === 'Pending'">Approve</button>
+                        <button type="submit" class="btn btn-primary btn-sm" *ngIf="item.status === 'Pending'" >Approve</button>
                         <button type="submit" class="btn btn-danger btn-sm" *ngIf="item.status === 'Pending'">Reject</button>
-                        <a>View Details</a>
+                        <button style="background-color: rgba(155, 231, 14, 0.267);" type="button"  (click)="viewFn(item)" >View Details</button>
+                         <!-- <a data-toggle="modal" data-target="#basicModal">View Detail</a>  -->
+                        <!-- -------------------------View detail---Model--------------------------------------------- -->
+
+
+
                     </td>
                   </tr>
-                  
+
                 </tbody>
               </table>
-        <!-- </div>
-    </div> -->
-  
-</div>
+
+
+<p *ngIf="viewStatus == true">{{temparr.name}},{{temparr.city}},{{temparr.jobtitle}},{{temparr.status}}</p>
+<!--
+</div> -->
+
+<!-- <div>
+  <span  ngFor="let x of items" (ngclass)="dupfuntion(x)">
+    <button class="btn" *ngFor="let item of dup" (click)="searchtext=item.status"  >{{item.status}}</button>
+</span>
+</div> -->
+
+ <!-- <div>
+  <span *ngFor="let s of tempData">
+    <button class="btn btn-primary" type="submit" (click)="searchtext=s.status" >{{s.status}}</button>
+</span> -->
+<!-- ----------------------------------------buttons to search--------------------------------------------- -->
+<span>
+  <button style="background:rgb(243, 154, 81);margin-right: 10px; border-radius:5px" (click)="searchtext='Approved'">Approved</button>
+  <button style="margin-right:10px; background: rgb(144, 72, 226);  border-radius:5px" (click)="searchtext='Pending'">Pending</button>
+  <button style="margin-right:10px; background: rgb(111, 120, 240);  border-radius:5px" (click)="searchtext='Rejected'">Rejected</button>
+
+</span>
+
+<!-- <button (click)="hasDuplicates(items)">test</button> -->
+<br>
+<br>
+
+
+

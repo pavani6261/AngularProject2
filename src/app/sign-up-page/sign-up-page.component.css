@@ -1,0 +1,138 @@
+input.ng-invalid.ng-touched {border: 3px solid Red !important;}
+
+body {
+
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 400px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+.form-check label{
+  color: aliceblue;
+}
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: rgb(14, 13, 13);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+/* body{
+    margin: 0px;
+    padding: 0px;
+    background: #333;
+  }
+  .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-form{
+    background: #fff;
+    padding: 30px 50px;
+    border-radius: 10px;
+  }
+  .form-title{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .form-title h1{
+    margin: 0px;
+    color: #0cd6a8;
+  }
+  .single-input{
+    width: 270px;
+    border:1px solid #c1c1c1;
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .single-input i{
+    padding: 8px 16px;
+    color: #0cd6a8;
+  }
+  .single-input input{
+    border:0px solid #c1c1c1;
+    width: 100%;
+    outline: none;
+    height: 30px;
+    font-size: 18px;
+  }
+  .submit-btn{
+     border:0px solid #c1c1c1;
+     margin-top: 30px;
+    
+  }
+  .submit-btn input{
+     background: #0cd6a8;
+     color: #fff;
+     cursor: pointer; 
+  } */

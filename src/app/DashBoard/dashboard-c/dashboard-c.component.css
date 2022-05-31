@@ -1,0 +1,13 @@
+.grey-bg {  
+    background-color: #F5F7FA;
+}
+
+button
+{
+    padding: auto;
+    margin: 3px;
+    font-size: small;
+    background-color: rgb(241, 133, 133);
+    border-radius: 10px;
+    border-style:solid;
+}

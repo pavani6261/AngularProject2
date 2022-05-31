@@ -2,3 +2,9 @@ p{
     color: blueviolet;
 }
 
+button
+{
+    padding: auto;
+    margin: 3px;
+    font-size: small;
+}

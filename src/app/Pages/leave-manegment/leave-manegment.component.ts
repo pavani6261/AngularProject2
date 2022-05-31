@@ -22,10 +22,7 @@ export class LeaveManegmentComponent implements OnInit {
     this.title = response.target.value;
   }
 
-  @Output() UpdateTypehandler = new EventEmitter<string>();
-  updateType(value: string) {
-    this.UpdateTypehandler.emit(value)
-  }
+
   // case ='';
   // UpdateTypehandler(result : string)
   // {
